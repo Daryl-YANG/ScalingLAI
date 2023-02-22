@@ -1,0 +1,11 @@
+Column_Name,Unit,Definition,Data_Type
+Site,N/A,Site name,string
+Date,N/A,Date of data collection as YYYYMMDD,date
+Time,N/A,Time of day when sample was collected,time
+SampleID,N/A,Unique identifier of the sample location,string
+ROI_ID,N/A,Unique identifier of the region of interest that correspond to each LAI sample,floating point
+Latitude,degree,Latitude of  the sampled location,floating point
+Longtitude,degree,Longitude of  the sampled location,floating point
+Elevation,m,Elevation above sea level of the sampled location,floating point
+LAI,N/A,leaf area index (LAI) at the sampled location,floating point
+SMP,N/A,Number of LAI measurements collected at each location,floating point

@@ -1,0 +1,8 @@
+File_Name,File_Description,Standard,UTC_Offset,File_Version,Contact,Start_Date,End_Date,Northwest_Latitude_Coordinate,Northwest_Longitude_Coordinate,Southeast_Latitude_Coordinate,Southeast_Longitude_Coordinate,Latitude,Longitude,Missing_Value_Codes,Notes,Field_Name_Orientation
+2022_Teller_LAI.csv,Leaf area index (LAI) of 100 locations at the Teller MM27 site,csv,-8:00,v1.0,"Shawn Serbin, sserbin@bnl.gov",7/19/2022,7/22/2022,64.758839,-165.979295,64.712145,-165.921485,-9999,-9999,-9999,100 records,horizontal
+2022_Teller_LAI_ROIs.kml,region of interest for each LAI measurement as  kml file,N/A,N/A,v1.0,"Shawn Serbin, sserbin@bnl.gov",-9999,-9999,64.758839,-165.979295,64.712145,-165.921485,-9999,-9999,-9999,100 records,N/A
+2022_Teller_LAI_ROI_Shapefile.zip,region of interest for each LAI measurement as shapefile,N/A,N/A,v1.0,"Shawn Serbin, sserbin@bnl.gov",-9999,-9999,64.758839,-165.979295,64.712145,-165.921485,-9999,-9999,-9999,100 records,N/A
+raw_data.zip,raw LAI data downloaded from the LI-COR 2200 instrument,N/A,-8:00,v1.0,"Shawn Serbin, sserbin@bnl.gov",7/19/2022,7/22/2022,64.758839,-165.979295,64.712145,-165.921485,-9999,-9999,-9999,N/A,horizontal
+2022_Teller_LAI_dd.csv,data description file,flmd,N/A,v1.0,"Shawn Serbin, sserbin@bnl.gov",-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A,N/A
+LAI-2200C_Manual.pdf,Instrument manual,N/A,N/A,v1.0,"Shawn Serbin, sserbin@bnl.gov",-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A,N/A
+Teller_LAI_methods.pdf,Methods used,N/A,N/A,v1.0,"Shawn Serbin, sserbin@bnl.gov",-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A,N/A
