@@ -53,12 +53,12 @@ data.org <- na.omit(data.org)
 
 #************************************* biomass model *************************************#
 ### split data into training and validation
-data.split <- sample.split(data.org, SplitRatio = 0.6) 
+data.split <- sample.split(data.org, SplitRatio = 0.7) 
 # get training and validation data
 rf.data.train <- subset(data.org, data.split == "TRUE") 
 rf.data.test <- subset(data.org, data.split == "FALSE") 
 #rf.data.train <- rf.data.train
-#rf.data.test <- rf.data.train
+rf.data.test <- rf.data.train
 # extract data for random forest regression
 #rf.data.train <- data.train[, c(15:20)]
 # build a random forest model 
@@ -88,6 +88,7 @@ plt.data <- data.frame('truth' = rf.data.test$LAI,
                        'unc' = pred.sd)
 
 rmse <- sqrt(sum((plt.data$predicted-plt.data$truth)^2)/nrow(plt.data))
+rmse <- format(round(rmse, 3), nsmall = 3)
 
 formula <- y ~ x
 ggplot(data = plt.data, aes(x = truth, y = predicted)) + 
@@ -107,12 +108,12 @@ ggplot(data = plt.data, aes(x = truth, y = predicted)) +
   stat_poly_eq(aes(label = paste(..rr.label.., sep = "~~~")), 
                label.x.npc = 0.65, label.y.npc = 0.25,
                formula = formula, parse = TRUE, size = 4, hjust = 0) +
-  annotate('text', x= 3.33, y = 0.7, label = 'RMSE = 0.85', size = 4, hjust = 0) +
+  annotate('text', x= 3.33, y = 0.7, label = paste0('RMSE = ', rmse), size = 4, hjust = 0) +
   theme(axis.line = element_line(colour = "black"),
         panel.background = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 
-pngName = paste0(our.dir, "/",'model_validation_withunc.pdf')
+pngName = paste0(our.dir, "/",'model_result_withunc.pdf')
 ggsave(pngName, plot = last_plot(), width = 12, height = 12, units = 'cm')
 #*****************************************************************************************#
