@@ -28,7 +28,7 @@ invisible(lapply(list.of.packages, library, character.only = TRUE))
 
 #************************************ user parameters ************************************#
 # define an output directory to store outputs
-out.dir <- "//Users/darylyang/Desktop/gdrive/github/lai_scaling/output"
+out.dir <- "/Volumes/Mercury/projects/lai_scaling/output/maps"
 # create output directory if not exist
 if (! file.exists(out.dir)) dir.create(out.dir,recursive=TRUE)
 # creat an temporary to store files temporarily generated during the course of processing
@@ -44,7 +44,7 @@ reso <- 1 # m
 
 #*************************************** load data ***************************************#
 # define the directory to hdf files
-source.dir <- "/Users/darylyang/Desktop/gdrive/github/lai_scaling/data"
+source.dir <- "/Volumes/Mercury/GitHub/lai_scaling/data"
 data.dir <- list.files(source.dir, pattern = 'teller_lai_database_v2.csv',
                        full.names = TRUE)
 data.org <- read.csv(data.dir)
@@ -56,12 +56,12 @@ data.org <- na.omit(data.org)
 
 # load in uas datasets
 # chm data
-uas.dir <- "/Volumes/data1/projects/lai_scaling/data"
+uas.dir <- "/Volumes/Mercury/projects/lai_scaling/data"
 chm.dir <- list.files(uas.dir, pattern = '*teller_dji_chm_combined_v2.tif',
                       full.names = TRUE, recursive = TRUE)
 chm.rst <- terra::rast(chm.dir)
 # solo refl data
-refl.dir <- list.files(uas.dir, pattern = '*NGEEArctic_Seward_2021_3DR_SOLO_Teller_Flight1_MBS',
+refl.dir <- list.files(uas.dir, pattern = '*SewPen_SOLO_20220713_Teller_MM27_Flight14_MBS',
                        full.names = TRUE, recursive = TRUE)
 refl.rst <- terra::rast(refl.dir)
 names(refl.rst) <- c('green', 'red', 'rededge', 'nir', 'none')
